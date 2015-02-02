@@ -20,8 +20,7 @@ html {
 
 body{
   font-family: $helvetica;
-  color: $text-color;
-  background-color: $secondary;
+  background-color: $light-orange;
   @include zero;
   // Hides close button if there is no js
   &.noscript .close-btn
@@ -35,6 +34,11 @@ header {
   position: relative;
 }
 
+h1 {
+  font-family: 'Raleway', sans-serif;
+  color: $hover;
+}
+
 .toggle-btn {
   position: absolute;
   right: 1em;
@@ -44,14 +48,16 @@ header {
 .navigation ul {
   @include zero;
   li {
+    margin-top: 2em;
     list-style-type: none;
     &:first-chiild a {
-      border-top: 1px solid $secondary;
+      border-top: 1px solid $light-orange;
     }
     a {
-      color: $secondary;
+      @include a-hover($dark-orange, $hover);
+      color: $light-orange;
       display: block;
-      padding: .5em 1em;
+      padding: 1em 1em;
       text-align: center;
       border-bottom: 1px solid ;
       text-decoration: none;
@@ -60,12 +66,12 @@ header {
 }
 
 .navigation ul li a{
-  background-color: $primary;
+  background-color: $dark-orange;
 }
 
 .toggle-btn,
 .close-btn {
-  color: $secondary;
+  color: $dark-orange;
   height: 40px;
   width: 40px;
   span {
@@ -81,10 +87,7 @@ header {
   margin: 1em;
 }
 
- .site-wrapper {
-  background-color: $primary;
-  color: $secondary;
- }
+ 
 
 @media only screen and (max-width: 60em){
   .site-wrapper {
@@ -132,7 +135,31 @@ body.noscript .slide-menu {
   right: auto;
 }
 
+h1 {
+  font-family: 'Raleway', sans-serif;
+  color: $dark-orange;
+  text-align: center;
+}
 
+.navigation ul {
+  @include zero;
+  li {
+    margin-top: 1px;
+    list-style-type: none;
+    &:first-chiild a {
+      border-top: 1px solid $light-orange;
+    }
+    a {
+      @include a-hover($dark-orange, $hover);
+      color: $light-orange;
+      display: block;
+      padding: 1em 1em;
+      text-align: center;
+      border-bottom: 1px solid ;
+      text-decoration: none;
+    }
+  }
+}
 
 
 

@@ -26,3 +26,10 @@
   white-space: normal;
   overflow: visible;
 }
+
+@mixin a-hover ($text-color, $hover-color){
+  color: $text-color;
+  &:hover{
+    color: $hover-color;
+  }
+}
