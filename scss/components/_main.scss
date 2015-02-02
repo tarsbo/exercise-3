@@ -19,7 +19,9 @@ html {
 
 
 body{
-  font-family: sans-serif;
+  font-family: $helvetica;
+  color: $text-color;
+  background-color: $secondary;
   @include zero;
   // Hides close button if there is no js
   &.noscript .close-btn
@@ -44,28 +46,33 @@ header {
   li {
     list-style-type: none;
     &:first-chiild a {
-      border-top: 1px solid $light-grey;
+      border-top: 1px solid $secondary;
     }
     a {
+      color: $secondary;
       display: block;
       padding: .5em 1em;
       text-align: center;
-      border-bottom: 1px solid $light-grey;
+      border-bottom: 1px solid ;
       text-decoration: none;
     }
   }
 }
 
+.navigation ul li a{
+  background-color: $primary;
+}
+
 .toggle-btn,
 .close-btn {
-  color: $text-color;
+  color: $secondary;
   height: 40px;
   width: 40px;
   span {
     @include hide-text;
   }
   i{
-  border: 1px solid $text-color;
+  border: 1px solid ;
   padding: .5em;
    }
 }
@@ -74,9 +81,14 @@ header {
   margin: 1em;
 }
 
+ .site-wrapper {
+  background-color: $primary;
+  color: $secondary;
+ }
+
 @media only screen and (max-width: 60em){
   .site-wrapper {
-    position: relative;
+    position: fixed;
     overflow: hidden;
     width: 100%;
     z-index: 100;
